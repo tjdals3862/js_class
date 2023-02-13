@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const cors = require("cors");
+      app.use(cors());
+      const myHeaders = new Headers();
+      myHeaders.append("X-Naver-Client-Id", "B81fDOZrQsT6oRUETnq3");
+      myHeaders.append("X-Naver-Client-Secret", "OdaWI0I7fx");
+
+      const requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow",
+      };
+
+      fetch("https://openapi.naver.com/v1/captcha/nkey?code=0", requestOptions)
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log("error", error));
+    </script>
+  </body>
+</html>

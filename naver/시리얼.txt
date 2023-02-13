@@ -1,0 +1,2 @@
+client_id = "B81fDOZrQsT6oRUETnq3";
+client_secret = "OdaWI0I7fx";

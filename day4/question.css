@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+}
+
+.parent {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  top: 0px;
+  left: 0px;
+  border: 2px solid black;
+}
+
+.parent div {
+  width: 100px;
+  height: 100px;
+  bottom: 0px;
+  right: 0px;
+  background-color: block;
+  border: 2px solid red;
+  position: absolute;
+}

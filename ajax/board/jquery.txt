@@ -1,0 +1,38 @@
+html, css, js 서버PC에 물리적인 위치를 갖는다
+실행은 로컬PC에서 실행된다. - 다운로드됨 서버에서 각각로컬 로컬PC에
+로컬PC - O/S(window10) - 브라우저(V8엔진 - 구글) - 다운로드된 파일 실행
+- 동기화가 안됨 - 클라이언트사이드렌더링 - 정적페이지 - 이미 결정됨
+- 다운로드파일크기가 크면 속도가 걸림 - 줄이려면 들여쓰기, 여백, 공백
+
+jquery는 라이브러리이다
+
+jquery.min.js - 들여쓰기나 여백완전제거 사이즈 줄임
+
+jquery.js
+
+jquery는 표준이 아니다.
+
+상속과 확장이 있다 - 오염
+
+오염이 되면 다른 이종간의 것들과 연계(연동) 어렵다
+
+$사용함 - Express language
+
+`${}`
+
+$(아이디|클래스|태그명|document).ready
+
+XXX.html <- document <- write() <- 브라우저 <- 쓴다
+
+<div id=d_msg>요기에 ...</div>
+d_msg.innerText ==> d_msg.text('<h3>값</h3>') - 태그 보임
+d_msg.innerHTML ==> d_msg.html('<h3>값</h3>') - 태그는 안보임
+
+jsp(Java Server Page) - 서버가 결정해 - 이미결정되었다. - 동기화 안됨
+
+XXX.jsp라고 쓰고 XXX.html이라고 읽는다.
+ 
+
+
+
+

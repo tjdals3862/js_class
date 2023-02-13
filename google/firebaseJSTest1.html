@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구글로그인-[모듈화 사용:type="module"]</title>
+  </head>
+  <body>
+    <!-- type=text/javascript 사용하는 경우와 module사용 경우 호환이 안되는 부분이 발생 -->
+    <!-- ECMAScript6기준으로 작업하는가?와 WWW CommonJS기준으로 작업하는가? -->
+    <script type="module">
+      import { firebaseApp } from "../service/firebase.js";
+      import AuthLogic from "../service/authLogic.js";
+      console.log(firebaseApp);
+      const authLogic = new AuthLogic();
+      console.log(authLogic);
+      const btnGoogle = document.querySelector("#btnGoogle");
+      btnGoogle.addEventListener("click", (e) => {
+        /* button태그 사용시에 디폴트 타입이 submit이어서 폼 전송이 일어나게 되어
+        이럴경우 해당페이지가 리플레쉬가 발생함에 따라 이상동작이 발생함으로 반드시
+        button태그로 click이벤트 처리시에는 주의할것 */
+        e.preventDefault(); //submit방지 용으로 추가 할 것
+        authLogic.login("Google").then((snapshot) => {
+          console.log(snapshot);
+          //구글 서버에서 응답으로 받은 정보를 문자열로 변환함
+          const temp = JSON.stringify(snapshot);
+          //위에서 변환된 정보를 배열로 변환
+          const jsonDoc = JSON.parse(temp);
+          console.log(jsonDoc.user.displayName);
+          //uid - 구글에서 할당되는 아이디값 - 이게 바뀌면 다른 사람임
+          //displayName - 구글 계정 이름
+          //email - 구글 계정 이메일
+        });
+      }); // end of btnGoogle
+      const moveMain = (displayName) => {
+        console.log(displayName);
+        window.location.href = "./index.html?displayName=" + displayName;
+      };
+      // 구글 서버에서 상태값의 변화를 체크하고 자동으로 호출해줌
+      // 개발자가 호출하는 함수가 아님
+      // 파라미터 user가 바뀌면 자동으로 호출된다는 것임
+      authLogic.onAuthChange((user) => {
+        // 아래 구문 분석 필수 - 리액트에서 빈번
+        user && moveMain(user.displayName);
+      });
+      function signOut() {
+        console.log("로그아웃");
+        //import문 사용시 주의 할 것은 반드시 type=module추가할 것
+        // text/javascript와 module사이에는 호환이 안됨 - 고려한 코딩 전개할 것
+        // 그럴경우 유일한 해결방법은 직접 함수 호출이 안되고
+        // 태그의 아이디를 사용하여 addEventListener로 함수처리할 것
+        authLogic.logout();
+      }
+    </script>
+    <button id="btnGoogle">구글로그인</button>
+  </body>
+</html>

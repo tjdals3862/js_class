@@ -1,0 +1,120 @@
+*{
+  margin: 0; /* 1: 4면에 대한 외부 여백은 0 */
+  padding : 0;  /* 2. 4면에 대한 내부 여백은 0 */
+  box-sizing: border-box;  /* 3: 여백을 포함한 크기 계산 */
+  /* border : 1px solid red; */
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  background-color: antiquewhite;  /* 7: 전체문서 배경색 */
+}
+/* section 태그로 전체를 감쌈 */
+
+.wrap{
+width: 340px;    /* 8: 가로크기 */
+padding: 30px;    /* 9: 내부여백 크기 */
+background-color: white;   /* 10 : 배경색상 */
+position : absolute;  /* 11: 좌표값에 따른 배치  */
+top : 50%;    /* 12: y축 중앙 배치  - 주의 요소의 왼쪽 상단 모서리 위치 */
+left : 50%;    /* 13 : x축 중앙 배치 */
+transform: translate(-50%, -50%);  /* 14: 요소의 중앙 위치  */
+}
+
+.wrap .menu a:nth-of-type(1) {
+  float: left;
+}
+
+
+.wrap .menu a:nth-of-type(2) {
+  float: right;
+}
+
+
+.wrap .menu::after {
+  content: "";
+  display : block;
+  clear; 
+  both;
+
+}
+
+
+
+.profile img{
+  width: 100%;
+  height: 200px;
+  border-radius: 50%;
+  /* margin:0px 0px 0px 5px ; 위 오 밑 왼 */
+  text-align: center;
+}
+
+
+.wrap .profile{
+  width: 100%;
+  text-align-last: center;
+}
+
+.wrap .profile img{
+  width : 200px;
+  height: 200px;
+  border-radius:  50%;
+  margin-top: 10px;
+  margin-bottom:20px;
+}
+
+
+.wrap .profile h1{
+  font: bold 22px/1 "airal";
+  margin-bottom: 5px;
+  color: blueviolet;
+}
+
+
+
+.wrap .profile p{
+  font: bold 12px/1 "airal";
+  color: rgb(118,118,118);
+  margin-bottom: 20px;
+}
+
+
+
+.wrap .profile a{
+  display:block;
+  width:200px;
+  line-height:60px;
+  background-color:#222;
+  color:#fff;
+  border-radius: 40px;
+  padding-left:10px; /* 이미지와 글자사이 10px의 간격을 줌 */
+  background-image:url(search.png);
+  margin : 0px 0 10px 15% /* 위 오 밑 왼 */
+
+
+}
+
+
+.wrap .profile .detailBtn{
+  color:red;
+  text-shadow: 2px 2px 3px white;
+}
+
+
+
+
+.wrap .contact {
+  margin-bottom : 20px;
+}
+
+
+
+
+.wrap .contact li{
+  width: 100%;
+  padding : 10px 0px;
+  border-bottom : 1px solid gray;
+}

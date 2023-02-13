@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const words = [
+        "spray",
+        "limit",
+        "elite",
+        "exuberant",
+        "destruction",
+        "present",
+      ];
+
+      const result = words.filter((word, index) => word.length > 6);
+      console.log(result);
+      document.write(typeof result);
+      document.write("<br />");
+      document.write(result[0]);
+
+      const [r1, r2, r3] = result;
+      document.write("<hr>");
+      document.write(r1, " ", r2, " ", r3);
+
+      let student = {
+        name: "이성계",
+        age: 35,
+        address: "서울시 마포구 공덕동",
+      };
+
+      const { name, age, address } = student;
+      document.write("<hr>");
+      document.write(name, age, address);
+    </script>
+  </body>
+</html>

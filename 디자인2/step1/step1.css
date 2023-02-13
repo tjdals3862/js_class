@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box; /* 1: 패딩과마진포함사이즈계산 */
+  /* border: 1px solid blueviolet; */ /* 옵션: 마진과패딩 공간, 영역, 블록 */
+}
+
+body {
+  margin: 0; /* 2: 빈공간 없이 왼쪽 상단 모서리 붙임 */
+}
+
+a {
+  text-decoration: none; /* 3. a태그 링크로 밑줄 없앰 */
+}
+
+ul {
+  list-style: none; /* 4: 구슬 삭제 */
+  padding-left: 0; /* 5: 구슬 공간 없앰 */
+}
+
+#navbar {
+  display: flex; /* 6: skill Inventory랑 ul을 좌우로 펼침 */
+  width: 100%; /* 7: 생략 - 반응형웹, 버거아이콘 */
+  height: 60px; /* 8: 높이 */
+  justify-content: space-between;
+  background-color: aquamarine;
+  position: fixed;
+}
+
+.navbar-logo {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.navbar-menu {
+  display: flex; /* ul안에 li를 좌우로 펼침 */
+}
+
+/* 메뉴 아이템 추가 */
+.navbar-menu-item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Home버튼 강조 */
+.navbar-menu-item.active {
+  border: 1px solid white;
+}
+
+.navbar-menu-item:hover {
+  background-color: yellowgreen;
+}
+
+.section {
+  text-align: center;
+  margin: auto;
+}
+
+.hcontent {
+  background-color: gray;
+  background-image: url("../images/home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+.mcontent {
+  background-color: rgb(253, 242, 154);
+  width: 100%;
+  height: 500px;
+}
+
+.scontent {
+  background-color: rgb(253, 154, 230);
+  width: 100%;
+  height: 500px;
+}
+
+.pcontent {
+  background-color: rgb(180, 154, 253);
+  width: 100%;
+  height: 500px;
+}
+
+.ccontent {
+  background-color: rgb(154, 253, 190);
+  width: 100%;
+  height: 500px;
+}
+
+.contact-email,
+.contact-rights {
+  color: white;
+}
+
+.contact-links {
+  font-size: 48px;
+  transform: all 300mx ease-in;
+}
+
+.contact-links i:hover {
+  transform: scale(1.1);
+  color: white;
+}

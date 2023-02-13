@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./workout.css" />
+    <!-- 
+      외부에 자바스크립트를 호출 할 때 반드시 DOM tree완성되어 있어야함
+      자바스크립트 파일은 웹 서버로 부터 다운로드 받고 브라우저가 실행을
+      하는데 이 때 해당 html문서의 DOM 구성이 완료되지 않으면
+      이벤트 소스의 정보가 undefined 상태이므로 에러가 발생함
+      TypeError
+      이 때 defer를 붙여주면 DOM tree가 완성될 때 까지 기다렸다가
+      실행함 - 버튼의 객체를 인지하므로 에러가 발생안함
+     -->
+    <script
+      src="https://kit.fontawesome.com/b1eee3ae1d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <script defer src="./workout.js"></script>
+  <body>
+    <section class="list">
+      <!-- 헤더 영역 -->
+      <header class="header">WorkoutApp</header>
+
+      <ul class="items">
+        <li class="item_row">
+          <div class="item">
+            <span class="item_name">스쿼트</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="item_name">데드리프트</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="item_name">레그프레스</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+      </ul>
+      <!-- 푸터 영역 -->
+      <footer class="footer">
+        <!-- 운동이름 입력화면 -->
+        <input type="text" name="" class="user_input" />
+        <button class="btn_add">
+          <i class="fas fa-plus"></i>
+        </button>
+      </footer>
+    </section>
+  </body>
+</html>

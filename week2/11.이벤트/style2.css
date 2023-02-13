@@ -1,0 +1,15 @@
+a {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  text-align: center;
+  margin: 100px;
+  font: bold 16px/50px "arial";
+}
+
+.box {
+  width: 500px;
+  height: 500px;
+  background-color: bisque;
+}

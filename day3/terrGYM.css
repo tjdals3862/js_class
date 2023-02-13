@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredericka+the+Great&family=Orbitron&display=swap");
+
+* {
+  margin: 0px; /*화면 좌측 상단 기준 외부여백 0(top) 0(right 0(left)로 초기화 )*/
+  padding: 0px; /*화면 좌측 상단 기준 내부여백 0(top) 0(right 0(left)로 초기화 )*/
+  box-sizing: border-box; /*여백을 포함하는 사이즈 계산 여백 5*/
+  /* border: 1px solid red; */
+}
+
+body {
+  background-color: #000; /* 전체화면을 black으로 */
+}
+
+ul {
+  list-style: none; /* list앞에 구슬 없애기 */
+}
+
+a {
+  text-decoration: none; /* 링크-손모양 밑줄제거 */
+}
+
+header {
+  width: 100%; /* 반응형웹 */
+  display: flex; /* inline,block, inline-block,flex(justify-content-space between:메뉴바 구성) */
+  border-bottom: 10px solid #aaa; /* 바닥에 선그리기 두께 1px 실선 (점선 dotted) 색상 */
+  justify-content: space-between; /* flex일때만 해당 */
+  align-items: center; /* 중앙배치 */
+  top: 0px; /* 꼭지점에서 y축좌표 */
+  left: 0px; /* 꼭지점에서 x축좌표 */
+  color: #fff; /* 글자색 */
+  z-index: 2; /* 레이어 계층 번호 */
+}
+
+header h1 {
+  font: bold 24px/1 "Architects Daughter";
+  color: white;
+  z-index: 2;
+}
+
+header .gnb li {
+  /* header태그 아래 ul class = gnb li 자손태그 */
+  margin: 0px 20px; /* 메뉴이름 오른쪽과 왼쪽에 20px 띄운다 40px */
+}
+
+header .gnb li a {
+  /* a태그 - 앵커태그 : 최근에 본 상품 링크기능 - 클릭하면 페이지 이동 */
+  color: #fff;
+}
+
+.gnb {
+  display: flex; /* ul태그 아래 li태그는 수직방향 배치가 됨 -> 수평방향으로 배치해줌 */
+  z-index: 2;
+}
+
+.sns {
+  /* 폰트어썸의 이미지 */
+  display: flex; /* ul태그 아래 li태그는 수직방향 배치가 됨 -> 수평방향으로 배치해줌 */
+  z-index: 2;
+}
+
+header .sns li {
+  margin: 0px 10px; /* top과 bottom은 0이고 left와 right는 10 */
+}
+
+header .sns li a {
+  font-size: 16px; /* a태그 안에 내용 글자크기 조정 - 이미지 크기가 조정됨 */
+  color: #fff; /* 색상값을 16진수로 표현 */
+}
+
+div {
+  /* 비디오 태그 컨텐츠 */
+  width: 100%; /* 폭은 가득 채움 */
+  height: 100vh; /* v는 뷰포트를 의미 보이는 화면의 높이값을 나타냄 */
+  position: absolute; /* 이것을 주어야 좌표값에 따라서 배치가 됨 */
+  top: 0px;
+  left: 0px;
+  overflow: hidden; /* 스크롤바 숨김 */
+  z-index: 1; /* 레이어의 값- 이위에 메뉴 글씨가 2임 mp4위에 글씨 보임 */
+}
+
+div video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 영상이 비디오에 꽉 차게 해줌 */
+}
+
+.txt {
+  position: absolute;
+  color: white;
+  left: 6vw;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.txt p {
+  font: normal 8vw/1 "Fredericka the Great";
+  color: white;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font: 12px/1 "arial"; /* 글자크기/로우높이값 글꼴 */
+  text-align: center; /* 글자의 위치 - 정중앙배치 */
+  letter-spacing: 2px; /* 알파벳과 알파벳 사이의 간격 */
+  padding: 5vh 5vw; /* v는 뷰포트를 의미 보여지는 공간에서의 내부여백값 */
+  color: white;
+  z-index: 2;
+}
+
+/* 마진 보더 패딩
+top -right -bottom -left순
+30 px 50 px면 top,botton 30px, left, right 50px
+30 px 50 px 70 px면 시계방향, 30px top, 50px right, 70px bottom
+*/

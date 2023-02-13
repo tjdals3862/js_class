@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!--UTF 전세계 표준 포맷-->
+    <!-- explorer에 여러버전 혹시 낮은 버전 동작이 될 때 최신 익스플로러로 렌더링해줌 -->
+    <!-- edge버전부터 크롬 V8엔진 사용 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- viewport가 있어야 모바일 디바이스가 모바일 페이지를 제대로 출력
+    하이브리드앱 = 네이티브앱 + 웹앱
+    요소 = 태그 = 노드
+    1) 인라인요소 - 크기없음, 자동줄바꿈없음 <br /> <br> : 리액트안됨
+    2) 블록요소 - 자체 크기, 자동으로 줄바꿈
+   -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>윈도우사이즈</title>
+    <style>
+      .tag {
+        display: inline-block; /* 컨텐츠 감싸준다  */
+        background-color: aquamarine;
+        font-size: 48px;
+        padding: 16px; /* 상하좌우 */
+        margin-top: 16px;
+        margin-bottom: 30px;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tag">윈도우사이즈</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      window.addEventListener("resize", () => {
+        console.log(
+          `window.screen : ${window.screen.width}, ${window.screen.height}`
+        );
+        console.log(
+          `window.outer : ${window.outerWidth}, ${window.outerHeight}`
+        );
+        console.log(
+          `window.inner : ${window.innerWidth}, ${window.innerHeight}`
+        );
+      });
+    </script>
+  </body>
+</html>

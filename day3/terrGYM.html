@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b1eee3ae1d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <!-- 
+      절대경로 - 처음부터 끌까지 다 적음
+      상대경로 - 권장사항. 현재 내위치를 기준으로 찾음
+      .하나이면 현재 내가 바라보는 경로
+      ..두개이면 현재 내위치의 상위 경로
+    -->
+    <link rel="stylesheet" href="./terrGYM.css" />
+  </head>
+  <body>
+    <!-- 메뉴바 구성(Navbar) -->
+    <header>
+      <h1>TerrGYM</h1>
+      <ul class="gnb">
+        <li><a href="https://www.naver.com">COMPANY</a></li>
+        <li><a href="#">BRAND</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">LOCATION</a></li>
+      </ul>
+      <ul class="sns">
+        <li>
+          <a href="#"><i class="fas far fab fa-instagram-square"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas far fa-envelope"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fab fa-facebook-square"></i></a>
+        </li>
+      </ul>
+    </header>
+    <hr />
+    <!-- 콘텐츠 구성(figure태그) -->
+    <div>
+      <video src="../images/car.mp4" autoplay muted></video>
+      <article class="txt">
+        <p>Back-End/Front-End<br />Development</p>
+      </article>
+    </div>
+    <hr />
+    <!-- 바닥글(footer태그) -->
+    <footer>2023 TerrGYM &copy; ALL RIGHTS RESERVED</footer>
+  </body>
+</html>

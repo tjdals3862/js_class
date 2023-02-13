@@ -1,0 +1,25 @@
+/*
+ 
+ */
+
+* {
+  box-sizing: border-box;
+  background-color: black;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  text-decoration: none;
+}
