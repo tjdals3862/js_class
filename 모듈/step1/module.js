@@ -6,6 +6,16 @@ export const hap = (i, j) => {
   return i + j;
 };
 
+export class Sonata {
+  constructor() {
+    this.wheelNum = 4;
+    this.speed = 10;
+  }
+  speedUp = () => {
+    this.speed = this.speed + 1;
+  };
+}
+
 /*
   호이스팅 이슈(맨 위로 끌어올려져 전역변수화 되는 현상)
   1) var i
